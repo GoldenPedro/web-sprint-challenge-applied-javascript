@@ -15,13 +15,11 @@ import axios from 'axios';
 axios.get('https://lambda-times-api.herokuapp.com/topics')
 .then( response => {
     const topics = response.data.topics
-    console.log(response.data)
-    console.log(response.data.topics)
+    // console.log(response.data)
+    // console.log(response.data.topics)
     topics.forEach(item => {
         let newTab = tabMaker(item)
         topicsDiv.appendChild(newTab)
-        console.log(topics)
-        console.log(item)
     });
 })
 .catch( err => {
